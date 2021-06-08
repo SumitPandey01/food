@@ -1,0 +1,539 @@
+/*fonts*/
+
+
+@font-face{
+    font-family: "railway-regular";
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face{
+    font-family: "railway-medium";
+    src: url(../fonts/Raleway-Medium.ttf);
+}
+@font-face{
+    font-family: "railway-bold";
+    src: url(../fonts/Raleway-Bold.ttf);
+}
+@font-face{
+    font-family: "railway-semibold";
+    src: url(../fonts/Raleway-SemiBold.ttf);
+}
+@font-face{
+    font-family: "railway-black";
+    src: url(../fonts/Raleway-Black.ttf);
+}
+@font-face{
+    font-family: "railway-ebold";
+    src: url(../fonts/Raleway-ExtraBold.ttf);
+}
+
+
+/*colors*/
+
+:root{
+
+--primary:#eebf00; 
+--secondary:#232B38;
+--ternary:#6c6c6c;
+--danger:#fe4545;
+--pure:#fefefe;
+--light:#f0f0f0;
+--heaven:#ffffff;
+--footer:#2d333f;
+}
+
+/* reset*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+-webkit-font-smoothing:antialiased; /* ye font smoothing k liye hai*/
+
+height: 6000px;
+}
+
+
+.container{
+    width: 100%;
+    padding: 0 25px;
+    margin: 0 auto;
+}
+
+@media(min-width:576px){
+.container{max-width: 540px;}
+
+}
+@media(min-width:768px){
+    .container{max-width: 7200px;}
+    
+    }
+ @media(min-width:992px){
+  .container{max-width: 960px;}
+        
+  }
+
+  @media(min-width:1200px){
+    .container{max-width: 1152px;}
+    
+    }
+.top-bar{
+    background:var(--secondary) ;
+    color: var(--pure);
+    font-family: "railway-semibold";
+    padding: .75rem 0;
+}    
+header.top-bar .auth > div a{
+    color: var(--pure);
+    text-decoration: none;
+}
+header.top-bar .icons a{
+    padding: 0 .35rem;
+}
+header.top-bar .auth .divider{
+    padding: 0 1rem;
+}
+header.top-bar .auth > div img{
+    margin-right: .35rem;
+}
+
+
+
+
+
+
+/*utility classes*/
+.flex{
+    display: flex;
+    
+}
+.flex-1{
+    flex: 1;
+}
+
+.justifyc{
+   justify-content: space-between;
+}
+
+.valign{
+    align-items: center;
+}    
+.justifycn{
+    justify-content: center;
+}
+
+
+/**/
+
+
+
+/*top part*/
+
+.top{
+    padding: 1.5rem;
+}
+ nav .top .contact h5{
+     font-family: "railway-black";
+     margin-bottom: 0.20rem;
+ }
+
+ nav .top .contact h6{
+    font-family: "railway-medium";
+    letter-spacing: 0.05rem;
+    font-size: 0.75rem;
+    color: var(--ternary);
+ }
+
+ nav .top .time h5{
+    font-family: "railway-black";
+    margin-bottom: 0.20rem;
+}
+
+nav .top .time h6{
+    font-family: "railway-medium";
+    letter-spacing: 0.05rem;
+    font-size: 0.75rem;
+    color: var(--ternary);
+ }
+
+ nav .top img{
+     margin-right: .20rem;
+ }
+
+
+
+ nav .navbar a{
+     text-decoration: none;
+     font-size: 1rem;
+     font-family: "railway-semibold" ;
+     padding: 1rem 1.5rem;
+     color: var(--secondary);
+     transition: all .3s ease;
+ }
+
+
+
+ nav .navbar a.active{
+       background: var(--primary);
+       color: var(--pure);
+
+ }
+
+ nav .navbar a:hover{
+
+    background: var(--primary);
+    color: var(--pure);
+
+ }
+
+
+/*this utility is for shadow*/
+.magicshadow{
+    background: var(--heaven);
+    position: relative;
+}
+.magicshadow:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 69px;
+    background-image: url(../icons/shadow.svg);
+    bottom: -21px;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1 ; /*ye image of peeche bhejne k kaam ata h*/
+}
+.magicshadowsm{
+    background: var(--heaven);
+    position: relative;
+}
+
+.magicshadowsm:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 69px;
+    background-image: url(../icons/shadow-sm.svg);
+    bottom: -25px;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 50%;/*ye aur next line centre m lane k liye h shadow ko*/
+    transform: translatex(-50%);
+    z-index: -1; /*ye image of peeche bhejne k kaam ata h*/
+}
+
+
+
+
+/**/
+
+
+header.hero{
+    height: 600px;
+    background-image: url(../images/hero.png);
+    background-position: 0%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+   
+}
+header.hero .container{
+    position: relative; /*ye hero img ko container k cntr m lane k liye use kara*/
+}
+header.hero .welcome{
+    padding: o.25rem;
+}
+
+header.hero .welcome span{
+    font-family: "railway-bold";
+    color: var(--secondary);
+    margin-right: 0.75rem;
+}
+header.hero h1{
+    font-family:"railway-ebold" ;
+    color: var(--secondary);
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+}
+header.hero h1 span{
+    color: var(--primary);
+}
+header.hero p{
+    font-family: "raiway-medium";
+    width: 50%;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/*btn utility class*/
+
+.btn{
+    padding: 0.75rem 0.75rem;
+    border-radius: 4px;
+    line-height: 0.8;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    border: 1px solid transparent;
+}
+.btn-p{
+    background: var(--primary);
+    color: var(--heaven);
+}
+.btn-s{
+    background: var(--secondary);
+    color: var(--heaven);
+}
+.btn-p:hover{
+    background: var(--heaven);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+.btn-s:hover{
+    background: var(--heaven);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+header.hero button:first-child{
+    margin-right: 00.50rem;
+}
+header.hero .hero-img{
+    position: absolute;
+    top: -40px;
+    right: 40px;
+}
+
+
+
+.section{
+    padding: 4rem 0;
+    
+   
+}
+
+section.top-products{
+    background: var(--light);
+    position: relative;
+    z-index: 0;
+}
+
+
+/*heading utility class*/
+
+.sheading{
+    font-family: "railway-bold";
+    text-align: center;
+    position: relative;
+    margin-bottom: 6rem;
+    padding-top: 2rem;
+   
+
+}
+.sheading:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-image: url(../icons/hr.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -40px;
+
+}
+/**/
+
+
+
+section.top-products .food-s .food-card{
+
+    background: var(--heaven);
+    padding: 1.5rem 0rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    
+   
+}
+
+section.top-products .food-s .food-card .product-img img{
+    width: 80%;
+    height: 200px;
+    object-fit: contain;
+    padding: bottom 1rem; ;
+}
+hr{
+    border: 1px solid var(--light);
+    opacity: 0.8;
+    margin: 1rem 0;
+}
+
+section.top-products .food-s .food-card h2{
+    font-family: "railway-bold";
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+}
+
+
+/*text ko cntr m krne ka hai*/
+.tc{
+text-align: center;
+} 
+
+/**/
+
+section.top-products .food-s .food-card .star img{
+
+    margin-right: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+section.top-products .food-s .food-card .price{
+    font-family: "railway-medium";
+    color: var(--danger);
+    margin-bottom: 1rem;
+}
+
+section.top-products .food-s .food-card button{
+    font-family: "railway-medium";
+    color: var(--secondary);
+    background: var(--heaven);
+    border: 2px solid  var(--primary);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+section.top-products .food-s .food-card button:hover{
+    background: var(--primary);
+    color: var(--heaven);
+}
+.food-s .food-card button img{
+    background: var(--primary);
+    padding: 0.5rem;;
+    height: 30px;
+    width: auto;
+    margin-right: 1.2rem;
+    overflow: hidden;
+   
+}
+.top-products .btn-wrapper{
+    margin-top: 2rem;
+}
+
+
+
+
+
+section.about-meal img{
+    width: 85%;
+}
+
+section.about-meal h2{
+    font-family: "railway-bold";
+    font-size: 1.4rem;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+    line-height: 1.3;
+}
+
+section.about-meal p{
+    line-height: 1.7;
+    margin-bottom: 4rem;
+    font-family: "raiway-regular";
+}
+
+
+
+section.our-services{
+    background: var(--light);
+    position: relative;
+    z-index: 0;
+}
+section.our-services .card-wrap{
+    margin-right: -2rem;
+    margin-top: 8rem;
+}
+section.our-services .service-card {
+    background: var(--heaven);
+    text-align: center;
+    padding: 2rem;
+    padding-top: 4rem;
+    border-radius: 4px;
+    position: relative;
+    margin-right: 2rem;
+}
+section.our-services .service-card .icon{
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+
+section.our-services .service-card h2{
+    font-family: "railway-bold";
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+section.our-services .service-card p{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.text-primary{
+    color: var(--primary);
+}
+.text-pure{
+    color: var(--pure);
+}
+
+section.big-deal .timer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -2rem;
+    margin-bottom: 2rem;
+}
+
+
+section.big-deal{
+    background: linear-gradient(
+        rgba(35, 43, 56 , 0.9),
+        rgba(35, 43, 56 , 0.9)
+
+    ), url(../images/food-table.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+section.big-deal .timer div{
+    margin-right: 2rem;
+    background: var(--primary);
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section.big-deal .timer div span:first-child{
+    font-family: "railway-semibold";
+    font-size: 2.5rem;
+    color: var(--heaven);
+    margin-bottom:0.05rem;
+}
+section.big-deal .timer div span:last-child{
+    font-family: "railway-medium";
+    color: var(--heaven);
+}
